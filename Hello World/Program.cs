@@ -63,3 +63,4 @@ namespace myCatsCode {
 
 }
 
+// An added line that doesn't change anything. It's sole purpose is to differentiate between my master branch and newly added AnotherBranch, so I could make a review pull request.
