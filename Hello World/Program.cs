@@ -63,33 +63,3 @@ namespace myCatsCode {
 
 }
 
-
-
-
-
-// namespace myCatsCode {
-
-
-//     class myClass {
-
-//         // public string randomString = "Orange Juice with Juicy Bits";
-//         // public int numberOfJuiceBoxes = 10;
-//         // public float fullnessOfCurrentBox = 0.99f;
-
-//         public bool noMeaning = true;
-
-//         // static int Counter(){
-//         //     if (noMeaning) {
-//         //         return 1;
-//         //     }
-//         // }
-
-//         static int Counter(){
-//             if(true){
-//                  return 1;
-//             }
-//         }
-
-//     }
-
-// }
