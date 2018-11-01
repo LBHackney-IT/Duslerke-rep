@@ -4,7 +4,7 @@ using myCode; //deliberatelly made two classes with the same name. So I could us
 // also used this line so I wouldn't need to type myCode.myClass
 
 
-namespace workAlready {
+namespace HelloWorld {
         class MainClass { //classes
 
         static void Main() {
