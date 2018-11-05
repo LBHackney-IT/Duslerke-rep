@@ -18,34 +18,60 @@ namespace Rectangle
         private double width;
         private double height;
         private double area;
+        private double awidth;
+        private double aheight;
+        private bool errFlag = false;
 
         public void AcceptDetails() 
         {
+
             Console.Write("Enter rectangle width: ");
             while (true)
             {
-                double awidth = Convert.ToDouble(Console.ReadLine());
+                this.errFlag = false;
+                try
+                {
+                    awidth = Convert.ToDouble(Console.ReadLine());
+                } catch(FormatException e)
+                {
+                    Console.Write(e.Message);
+                    Console.Write(" Try again: ");
+                    this.errFlag = true;
+                }
+
                 if (awidth >= 0)
                 {
                     this.width = awidth;
                     break;
                 }
-                else
+                else if (awidth < 0 && !this.errFlag)
                 {
-                    Console.WriteLine("Width can't be negative! Try again: ");
+                    Console.Write("Width can't be negative! Try again: ");
                 }
             }
 
             Console.Write("Enter rectangle height: ");
             while (true)
             {
-                double aheight = Convert.ToDouble(Console.ReadLine());
-                if(aheight >= 0)
+                this.errFlag = false;
+                try
+                {
+                    aheight = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (FormatException e)
+                {
+                    Console.Write(e.Message);
+                    Console.Write(" Try again: ");
+                    this.errFlag = true;
+                }
+
+                if (aheight >= 0)
                 {
                     this.height = aheight;
-                } else
+                    break;
+                } else if (aheight < 0 && !this.errFlag)
                 {
-                    Console.WriteLine("Heigth can't be negative! Try again: ");
+                    Console.Write("Heigth can't be negative! Try again: ");
                 }
             }
         }
