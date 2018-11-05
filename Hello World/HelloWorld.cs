@@ -5,17 +5,18 @@ using myCode; //deliberatelly made two classes with the same name. So I could us
 
 
 namespace HelloWorld {
-        class MainClass { //classes
+    class MainClass { //classes
 
-        static void Main() {
+         static void Main() {
             myClass meaninglessName = new myClass();
             myCatsCode.myClass evenLessMeaningfullName = new myCatsCode.myClass();
             evenLessMeaningfullName.justCondition();
             meaninglessName.Counter();
 
             if (meaninglessName.numberOfJuiceBoxes<=0 ) {
-                Console.WriteLine("Hello World");
+                Console.WriteLine("Hello World!");
             }
+            Console.ReadKey();
         }
 
     }
@@ -51,11 +52,13 @@ namespace myCatsCode {
 
     class myClass {
 
-
+        public bool ioop = true;
         public bool justCondition() { //class method
             
-            if (true) { //just something to stuff into
+            if (ioop) { //just something to stuff into
                 return false;
+            } else {
+                return true;
             }
         }
     }
